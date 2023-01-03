@@ -3,13 +3,17 @@ package com.example.hello_spring.service;
 import com.example.hello_spring.domain.Member;
 import com.example.hello_spring.repository.MemberRepository;
 import com.example.hello_spring.repository.MemoryMemberRepository;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
 
+@Service
 public class MemberService { // command + shift + T -> test파일 자동 생성
 
     // DI (Dependency Injection) 의존관계 주입
+    @Autowired
     public MemberService(MemberRepository memberRepository) {
         this.memberRepository = memberRepository;
     }
