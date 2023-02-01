@@ -5,11 +5,13 @@ import com.example.hello_spring.repository.MemberRepository;
 import com.example.hello_spring.repository.MemoryMemberRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 import java.util.Optional;
 
 //@Service
+@Transactional
 public class MemberService { // command + shift + T -> test파일 자동 생성
 
     // DI (Dependency Injection) 의존관계 주입
